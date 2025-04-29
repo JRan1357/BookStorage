@@ -9,10 +9,10 @@
 /* Reset */
 :root > * {
     margin: 0;
-    height: 100%;
 }
 
 
 body{
+    height: 100vh;
     background-image: linear-gradient(var(--bg-1), var(--bg-2));
 }
