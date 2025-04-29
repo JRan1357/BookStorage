@@ -16,3 +16,24 @@ body{
     height: 100vh;
     background-image: linear-gradient(var(--bg-1), var(--bg-2));
 }
+
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+.mainContainer > *{
+    border: solid 3px purple;
+}
+
+
+.bookForm{
+    
+}
+
+.bookViewer{
+
+}
