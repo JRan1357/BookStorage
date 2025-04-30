@@ -33,9 +33,14 @@ body{
     border: solid 3px purple;
 }
 
+.subContainer{
+    height: 70vh;
+    border: solid 3px white;
+    border-radius: 10px;
+}
+
 
 .bookForm{
-    
 }
 
 .bookViewer{
