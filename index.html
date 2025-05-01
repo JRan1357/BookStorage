@@ -10,19 +10,15 @@
 <body>
 <div class="mainContainer">
     
-        <div class="bookForm subContainer">
-            <form action="">
-                <fieldset>
+        <div class="bookInput subContainer">
+            <form action="" onsubmit="test()" >
+                <fieldset class="form">
                     <label for="title">Title</label>
                     <input type="text" id="title">
-                    <br>
                     <label for="author">Author</label>
                     <input type="text" id="author">
-                    <br>
                     <label for="pages">Pages</label>
                     <input type="number" id="pages">
-                    <br>
-                    
                     <label for="read">
                         <input type="radio">Read
                     </label>
@@ -35,7 +31,9 @@
             </form>
         </div>
     
-        <div class="bookViewer subContainer"></div>
+        <div class="bookViewer subContainer">
+
+        </div>
 </div>
 
 </body>
