@@ -23,8 +23,10 @@ body{
 
 .mainContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 30px;
+
+    height: 100%;
 
 }
 
@@ -54,16 +56,24 @@ body{
     align-items: center;
 }
 
-.bookViewer{
+#bookViewer{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 1fr 1fr;
 
     gap: 20px;
+
+    border: solid 4px white;
+
+    margin: 20px;
+
+    overflow: auto;
+
+    height: 80%;
 }
 
 .bookCard{
     border: solid 2px white;
     border-radius: 10px;
-    width: 40%;
+    width: 100%;
 }

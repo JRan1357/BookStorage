@@ -41,6 +41,7 @@ function createHtml(obj) {
 
 function drawHtml() {
     console.log('drawing html');
+    document.getElementById('bookViewer').innerHTML = '';
     books.forEach((item) => {
         createHtml(item)
     });
