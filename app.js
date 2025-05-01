@@ -6,13 +6,35 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-}   
+};
+
+function getValue(id) {
+    return document.getElementById(id).value;
+};
 
 
 function getValues() {
-    let inputs = ['title', 'author', 'pages', 'read']
-    document.getElementById('title').value new Book()
-    inputs.forEach(item => {
-        
-    })
-}
+    console.log("running getValues()");
+    let title = getValue('title');
+    let author = getValue('author');
+    let pages = getValue('pages');
+    let read = getValue('read');
+
+    let book = new Book(title, author, pages, read);
+
+    console.log('book:', book);
+    books.push(book);
+};
+
+function createHtml(obj) {
+    const display = document.getElementById('bookViewer');
+    const div = document.createElement('div');
+    div.insertAdjacentHTML(
+        'beforeend',
+        `<p>Title: ${obj.title}</p>
+        <p>Author: ${obj.author}</p>
+        <p>Pages: ${obj.pages}</p>
+        <p>Read: ${obj.read}</p>`
+    )
+    display.appendChild(div);
+};
