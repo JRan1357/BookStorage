@@ -38,3 +38,10 @@ function createHtml(obj) {
     )
     display.appendChild(div);
 };
+
+function drawHtml() {
+    console.log('drawing html');
+    books.forEach((item) => {
+        createHtml(item)
+    });
+};
