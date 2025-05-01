@@ -29,13 +29,13 @@ function getValues() {
 function createHtml(obj) {
     const display = document.getElementById('bookViewer');
     const div = document.createElement('div');
-    div.insertAdjacentHTML(
-        'beforeend',
+    div.innerHTML = 
         `<p>Title: ${obj.title}</p>
         <p>Author: ${obj.author}</p>
         <p>Pages: ${obj.pages}</p>
         <p>Read: ${obj.read}</p>`
-    )
+
+    div.classList.add('bookCard');
     display.appendChild(div);
 };
 
