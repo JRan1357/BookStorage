@@ -4,14 +4,11 @@
     --bg-2 : rgb(183, 0, 255);
 }
 
-
-
 /* Reset */
 :root > * {
     margin: 0;
     border: none;
 }
-
 
 body{
     height: 100vh;
@@ -20,19 +17,12 @@ body{
     color: white;
 }
 
-
 .mainContainer{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 30px;
 
     height: 100%;
-
-}
-
-
-.mainContainer > *{
-
 }
 
 .subContainer{
@@ -58,7 +48,7 @@ body{
 
 #bookViewer{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(20%, 50%));
     grid-template-columns: 1fr 1fr;
 
     gap: 20px;
