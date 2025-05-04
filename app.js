@@ -41,12 +41,15 @@ function getValues() {
 function createHtml(obj) {
     const display = document.getElementById('bookViewer');
     const div = document.createElement('div');
-    div.id = obj.id;
+    let id = obj.id.toString()
+    div.id = id;
+    console.log('id: ', id, typeof id)
     div.innerHTML = 
         `<p>Title: ${obj.title}</p>
         <p>Author: ${obj.author}</p>
         <p>Pages: ${obj.pages}</p>
-        <button onclick="toggleRead(this)">${obj.read}</button>`
+        <p>id: ${obj.id}</p>
+        <button onclick="toggleRead(this, '${id}')">${obj.read}</button>`
 
     div.classList.add('bookCard');
     display.appendChild(div);
@@ -62,21 +65,25 @@ function drawHtml() {
 };
 
 // toggles read status on book card
-function toggleRead(button) {
+function toggleRead(button, id) {
     if (button.textContent == 'Unread') {
         button.textContent = 'Read';
     } else {
-        button.textContent = 'Unread'
+        button.textContent = 'Unread';
     }
     // update read status in book object
+    console.log(this);
+    console.log('id: ', id);
     updateObj(id, read, button.textContent);
 }
 
 //helper function to find obj and update value
 
 function updateObj(targetId, value, newvalue) {
-    let book = books.find(item => {
-        item.id == targetId;
-    })
+    console.log('target ID: ', targetId);
+    let book = books.find(item => item.id = targetId);
+    console.log('book:', book);
+    console.log('value', value);
+    console.log(book.value);
     book.value = newvalue;
 }
