@@ -48,7 +48,6 @@ function createHtml(obj) {
         `<p>Title: ${obj.title}</p>
         <p>Author: ${obj.author}</p>
         <p>Pages: ${obj.pages}</p>
-        <p>id: ${obj.id}</p>
         <button onclick="toggleRead(this, '${id}')">${obj.read}</button>`
 
     div.classList.add('bookCard');
