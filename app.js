@@ -8,11 +8,12 @@ function Book(title, author, pages, read) {
     this.read = read;
 };
 
+// helper function to get value of element
 function getValue(id) {
     return document.getElementById(id).value;
 };
 
-
+// reads values from form
 function getValues() {
     console.log("running getValues()");
     let title = getValue('title');
@@ -40,7 +41,7 @@ function createHtml(obj) {
         `<p>Title: ${obj.title}</p>
         <p>Author: ${obj.author}</p>
         <p>Pages: ${obj.pages}</p>
-        <p>Read: ${obj.read}</p>`
+        <button onclick="toggleRead()"><p>Read: ${obj.read}</p></button>`
 
     div.classList.add('bookCard');
     display.appendChild(div);
@@ -53,3 +54,8 @@ function drawHtml() {
         createHtml(item)
     });
 };
+
+// toggles read status on book card
+function toggleRead() {
+    alert(this.content);
+}
