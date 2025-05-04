@@ -41,7 +41,7 @@ function createHtml(obj) {
         `<p>Title: ${obj.title}</p>
         <p>Author: ${obj.author}</p>
         <p>Pages: ${obj.pages}</p>
-        <button onclick="toggleRead()"><p>Read: ${obj.read}</p></button>`
+        <button onclick="toggleRead(this)">${obj.read}</button>`
 
     div.classList.add('bookCard');
     display.appendChild(div);
@@ -56,6 +56,10 @@ function drawHtml() {
 };
 
 // toggles read status on book card
-function toggleRead() {
-    alert(this.content);
+function toggleRead(button) {
+    if (button.textContent == 'Unread') {
+        button.textContent = 'Read';
+    } else {
+        button.textContent = 'Unread'
+    }
 }
