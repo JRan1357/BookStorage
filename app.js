@@ -1,12 +1,16 @@
 let books = []
 
-
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.id = genId();
 };
+
+function genId() {
+    return crypto.randomUUID();
+}
 
 // helper function to get value of element
 function getValue(id) {
@@ -27,16 +31,17 @@ function getValues() {
         read = selected.value;
     }
 
-
     let book = new Book(title, author, pages, read);
 
     console.log('book:', book);
     books.push(book);
 };
 
+// generates html for bookcard
 function createHtml(obj) {
     const display = document.getElementById('bookViewer');
     const div = document.createElement('div');
+    div.id = obj.id;
     div.innerHTML = 
         `<p>Title: ${obj.title}</p>
         <p>Author: ${obj.author}</p>
@@ -47,6 +52,7 @@ function createHtml(obj) {
     display.appendChild(div);
 };
 
+// draws book card
 function drawHtml() {
     console.log('drawing html');
     document.getElementById('bookViewer').innerHTML = '';
@@ -62,4 +68,15 @@ function toggleRead(button) {
     } else {
         button.textContent = 'Unread'
     }
+    // update read status in book object
+    updateObj(id, read, button.textContent);
+}
+
+//helper function to find obj and update value
+
+function updateObj(targetId, value, newvalue) {
+    let book = books.find(item => {
+        item.id == targetId;
+    })
+    book.value = newvalue;
 }
