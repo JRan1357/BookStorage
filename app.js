@@ -74,7 +74,7 @@ function toggleRead(button, id) {
     // update read status in book object
     console.log(this);
     console.log('id: ', id);
-    updateObj(id, read, button.textContent);
+    updateObj(id, 'read', button.textContent);
 }
 
 //helper function to find obj and update value
@@ -82,8 +82,9 @@ function toggleRead(button, id) {
 function updateObj(targetId, value, newvalue) {
     console.log('target ID: ', targetId);
     let book = books.find(item => item.id = targetId);
+
     console.log('book:', book);
-    console.log('value', value);
-    console.log(book.value);
+    console.log('value', book[value]);
+
     book.value = newvalue;
 }
