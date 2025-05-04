@@ -18,7 +18,13 @@ function getValues() {
     let title = getValue('title');
     let author = getValue('author');
     let pages = getValue('pages');
-    let read = getValue('read');
+    
+    //get value of radio button
+    const selected = document.querySelector('input[name="hasRead":checked');
+    if (selected) {
+        alert(selected.value);
+    }
+
 
     let book = new Book(title, author, pages, read);
 

@@ -20,9 +20,12 @@
                     <label for="pages">Pages:</label>
                     <input type="number" id="pages">
                     <label for="read" id="read">
-                        <p><input type="radio">Read</p>
-                        <p><input type="radio">Unread</p>
+                        <p>
+                            <input type="radio" name="hasRead">Read
+                            <input type="radio" name="hasRead">Unread
+                        </p>
                     </label>
+                    <br>
                     <button type="button" onclick="getValues(); drawHtml()" id="submitBtn">Submit!</button>
                 </fieldset>
             </form>
