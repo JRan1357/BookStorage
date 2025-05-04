@@ -67,7 +67,7 @@ body{
     grid-template-rows: repeat(auto-fill, 20%);
     grid-template-columns: repeat(auto-fit, minmax(20%, 300px));
 
-    justify-content: space-between;
+    justify-content: space-around;
 
     gap: 20px;
     padding-right: 40px;
@@ -80,11 +80,14 @@ body{
 }
 
 .bookCard{
-    border: solid 2px white;
+    border: solid 2px rgb(193, 193, 193);
     border-radius: 10px;
     width: 90%;
     padding: 10px;
     margin: 10px;
     margin-right: 20px;
+
+    background-image: linear-gradient(rgb(101, 0, 173), rgb(43, 1, 87));
+    box-shadow: 10px 10px 30px 10px black;
     
 }
