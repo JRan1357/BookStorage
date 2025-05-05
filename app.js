@@ -49,7 +49,7 @@ function createHtml(obj) {
         <p>Author: ${obj.author}</p>
         <p>Pages: ${obj.pages}</p>
         <button onclick="toggleRead(this, '${id}')">${obj.read}</button>
-        <button onclick="deleteObj(this.id)">Remove</button>`
+        <button onclick="deleteObj('${id}')">Remove</button>`
 
     div.classList.add('bookCard');
     display.appendChild(div);
@@ -60,6 +60,8 @@ function deleteObj(id) {
     let index = books.findIndex(book => book.id == id);
     console.log('deleting: ', books[index])
     books.splice(index, 1);
+    // remove html
+    document.getElementById(id).remove();
 }
 
 // draws book card
