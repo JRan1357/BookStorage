@@ -64,10 +64,10 @@ body{
 
 #bookViewer{
     display: grid;
-    grid-template-rows: repeat(auto-fill, 20%);
-    grid-template-columns: repeat(auto-fit, minmax(20%, 300px));
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fill, 30%);
 
-    justify-content: space-around;
+    justify-content: space-eve;
 
     gap: 20px;
     padding-right: 40px;
@@ -85,7 +85,9 @@ body{
     width: 90%;
     padding: 10px;
     margin: 10px;
-    margin-right: 20px;
+    margin-bottom: 30px;;
+
+    min-height: fit-content;
 
     background-image: linear-gradient(rgb(101, 0, 173), rgb(43, 1, 87));
     box-shadow: 10px 10px 30px 10px black;
