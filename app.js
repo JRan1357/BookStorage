@@ -51,7 +51,7 @@ function createHtml(obj) {
         <button onclick="toggleRead(this, '${id}')">${obj.read}</button>
         <button onclick="deleteObj('${id}')">Remove</button>`
 
-    div.classList.add('bookCard');
+    div.classList.add('bookCard');;
     display.appendChild(div);
 };
 
