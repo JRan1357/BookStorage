@@ -52,7 +52,7 @@ function createHtml(obj) {
         <button onclick="deleteObj('${id}')">Remove</button>`
 
     div.classList.add('bookCard');
-    display.appendChild(div);
+    display.appendChild(div)
 };
 
 function deleteObj(id) {
